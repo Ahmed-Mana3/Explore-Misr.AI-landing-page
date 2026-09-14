@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('manage/', views.manage_waitlist, name='manage_waitlist'),
+    path('googlec1b82d93b0cf05b2.html', views.google_verification, name='google_verification'),
 ]

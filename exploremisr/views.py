@@ -1,10 +1,21 @@
 import re
+from pathlib import Path
 
 from django.contrib import messages
+from django.http import FileResponse
 from django.shortcuts import redirect, render
 
 # In-memory waitlist (Vercel serverless has a read-only filesystem, so no DB)
 WAITLIST_NUMBERS = []
+
+VERIFICATION_DIR = Path(__file__).resolve().parent.parent / 'verification'
+
+
+def google_verification(request):
+    return FileResponse(
+        open(VERIFICATION_DIR / 'googlec1b82d93b0cf05b2.html', 'rb'),
+        content_type='text/html',
+    )
 
 
 def normalize_mobile_number(value):

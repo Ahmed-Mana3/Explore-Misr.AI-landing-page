@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#2a2118">
+    <meta name="theme-color" content="#0b1f3a">
     
     <!-- Primary Meta Tags -->
     <title>Explore-Misr.AI | Your Personal AI Tour Guide for Egypt</title>
@@ -15,9 +15,9 @@
     <meta name="author" content="explore-misr.ai">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{% static 'img/explore-misr-logo.png' %}">
-    <link rel="shortcut icon" type="image/png" href="{% static 'img/explore-misr-logo.png' %}">
-    <link rel="apple-touch-icon" href="{% static 'img/explore-misr-logo.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'img/explore-misr-ai-icon.png' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/explore-misr-ai-icon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'img/explore-misr-ai-icon.png' %}">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://explore-misr.online/" />
@@ -27,9 +27,9 @@
     <meta property="og:url" content="https://explore-misr.online/">
     <meta property="og:title" content="Explore-Misr.AI | Your Personal AI Tour Guide for Egypt">
     <meta property="og:description" content="Step into the past with Explore-Misr.AI. Our revolutionary AI-powered smart glasses replace traditional tour guides to tell the untold stories of Egypt's ancient monuments in any language.">
-    <meta property="og:image" content="https://explore-misr.online/static/img/explore-misr-logo.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://explore-misr.online/static/img/explore-misr-ai-logo.png">
+    <meta property="og:image:width" content="900">
+    <meta property="og:image:height" content="300">
     <meta property="og:image:alt" content="Explore-Misr.AI - Your Personal AI Tour Guide">
     <meta property="og:site_name" content="Explore-Misr.AI">
     <meta property="og:locale" content="en_US">
@@ -39,7 +39,7 @@
     <meta name="twitter:url" content="https://explore-misr.online/">
     <meta name="twitter:title" content="Explore-Misr.AI | Your Personal AI Tour Guide for Egypt">
     <meta name="twitter:description" content="Step into the past with Explore-Misr.AI. Our revolutionary AI-powered smart glasses replace traditional tour guides to tell the untold stories of Egypt's ancient monuments in any language.">
-    <meta name="twitter:image" content="https://explore-misr.online/static/img/explore-misr-logo.png">
+    <meta name="twitter:image" content="https://explore-misr.online/static/img/explore-misr-ai-logo.png">
     <meta name="twitter:image:alt" content="Explore-Misr.AI - Your Personal AI Tour Guide">
 
     <!-- Structured Data (JSON-LD) -->
@@ -56,7 +56,7 @@
         "url": "https://explore-misr.online/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://explore-misr.online/static/img/explore-misr-logo.png"
+          "url": "https://explore-misr.online/static/img/explore-misr-ai-logo.png"
         }
       }
     }
@@ -77,16 +77,16 @@
                     },
                     colors: {
                         brand: {
-                            dark: '#2a2118',       /* Deep Charcoal (Primary Text) */
-                            muted: '#5c4d3c',      /* Accessible Secondary Text (WCAG AA) */
-                            sand: '#efe8d7',       /* Base Sand/Beige */
-                            sandDark: '#d4c5b0',   /* Accessible Sand for borders/lines */
-                            sandLight: '#fdfcfb',  /* Ultra-light Sand for subtle backgrounds */
+                            dark: '#0b1f3a',       /* Deep Navy (Primary Text / Logo Wordmark) */
+                            muted: '#5b6b7c',      /* Secondary Text (Logo Tagline Gray) */
+                            sand: '#f6e3ae',       /* Light Gold (Logo Accent - soft fills) */
+                            sandDark: '#d9a94b',   /* Main Gold (Logo Accent - borders/lines) */
+                            sandLight: '#fbf7ec',  /* Warm off-white (subtle backgrounds) */
                         }
                     },
                     boxShadow: {
-                        'soft': '0 10px 40px -10px rgba(42, 33, 24, 0.06)',
-                        'floating': '0 20px 40px -10px rgba(42, 33, 24, 0.1)',
+                        'soft': '0 10px 40px -10px rgba(11, 31, 58, 0.06)',
+                        'floating': '0 20px 40px -10px rgba(11, 31, 58, 0.1)',
                     }
                 }
             }
@@ -100,15 +100,15 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-image: linear-gradient(135deg, #2a2118 0%, #8a735b 100%);
+            background-image: linear-gradient(135deg, #0b1f3a 0%, #d9a94b 100%);
         }
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .card-hover:hover {
             transform: translateY(-4px);
-            box-shadow: 0 20px 40px -10px rgba(42, 33, 24, 0.1);
-            border-color: #d4c5b0;
+            box-shadow: 0 20px 40px -10px rgba(11, 31, 58, 0.1);
+            border-color: #d9a94b;
         }
     </style>
 </head>
@@ -118,8 +118,7 @@
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-brand-sandDark/30 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-                <img src="{% static 'img/explore-misr-logo.png' %}" alt="Explore Misr Logo" class="relative max-h-10 w-auto object-contain">
-                <span class="font-bold text-xl tracking-tight text-brand-dark cursor-pointer">explore-misr.ai</span>
+                <img src="{% static 'img/explore-misr-ai-logo.png' %}" alt="Explore Misr AI Logo" class="relative h-11 sm:h-14 w-auto object-contain">
             </div>
             <a href="#waitlist" class="hidden sm:inline-flex items-center justify-center text-sm font-bold text-brand-dark transition-colors bg-brand-sand hover:bg-brand-sandDark/40 px-6 py-2.5 rounded-full border border-brand-sandDark/50">
                 Join Waitlist
@@ -170,9 +169,9 @@
                 {% endfor %}
             </div>
             {% else %}
-            <p class="mt-5 text-xs sm:text-sm font-medium text-brand-muted flex items-center justify-center gap-1.5 text-center px-4 leading-normal">
+            <p class="mt-5 text-xs sm:text-sm font-medium text-brand-muted flex flex-wrap items-center justify-center gap-1.5 text-center px-3 sm:px-4 leading-snug">
                 <svg class="w-4 h-4 text-brand-dark/60 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                <span>Join the exclusive waitlist today. <span class="inline-block sm:inline">Limited spots available.</span></span>
+                <span class="min-w-0">Join the exclusive waitlist today. Limited spots available.</span>
             </p>
             {% endif %}
         </div>
@@ -219,55 +218,91 @@
 
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Ahmed Medhat -->
-                <div class="bg-white border border-brand-sandDark/30 shadow-soft p-8 rounded-2xl card-hover flex flex-col text-left">
-                    <h3 class="text-2xl font-bold text-brand-dark mb-1">Ahmed Medhat</h3>
-                    <p class="text-brand-dark/60 font-bold text-xs mb-6 uppercase tracking-wider">Visionary & Co-founder</p>
-                    
-                    <div class="flex flex-col gap-3 mb-6">
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-sand border border-brand-sandDark/30 flex items-center justify-center shrink-0">
-                                <svg class="w-4 h-4 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <div class="bg-white border border-brand-sandDark/25 rounded-3xl shadow-soft group hover:shadow-floating hover:-translate-y-1.5 hover:border-brand-sandDark/60 transition-all duration-300 flex flex-col overflow-hidden text-left">
+                    <div class="h-1.5 bg-gradient-to-r from-brand-sandDark/80 via-brand-sandDark to-brand-sandDark/20"></div>
+                    <div class="p-8 md:p-9 flex flex-col flex-1">
+                        <div class="flex items-center gap-4 mb-7">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-dark to-[#081a30] ring-2 ring-brand-sandDark/30 flex items-center justify-center shrink-0 shadow-md">
+                                <span class="text-brand-sandDark font-extrabold text-xl tracking-wide">AM</span>
                             </div>
-                            <span class="text-sm font-semibold text-brand-dark">Co-founder, explore-misr.ai</span>
+                            <div class="min-w-0">
+                                <h3 class="text-2xl font-bold text-brand-dark tracking-tight leading-tight">Ahmed Medhat</h3>
+                                <p class="text-brand-muted font-bold text-xs mt-1.5 uppercase tracking-widest">Visionary &amp; Co-founder</p>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-sand border border-brand-sandDark/30 flex items-center justify-center shrink-0">
-                                <svg class="w-4 h-4 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+
+                        <div class="flex flex-col gap-3 mb-8">
+                            <div class="flex items-center gap-3 bg-brand-sandLight border border-brand-sandDark/20 rounded-xl px-4 py-3">
+                                <div class="w-9 h-9 rounded-lg bg-white border border-brand-sandDark/25 flex items-center justify-center text-brand-dark shrink-0 shadow-sm">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div class="min-w-0">
+                                    <p class="text-[11px] font-bold uppercase tracking-wider text-brand-muted">Explore Misr</p>
+                                    <p class="text-sm font-bold text-brand-dark truncate">Co-founder, Explore Misr AI</p>
+                                </div>
                             </div>
-                            <span class="text-sm font-semibold text-brand-dark">Founder, <a href="https://skillifly.cloud" target="_blank" rel="noopener noreferrer" class="hover:underline text-brand-dark font-bold underline-offset-2">SKILLIFLY</a></span>
+                            <div class="flex items-center gap-3 bg-brand-sandLight border border-brand-sandDark/20 rounded-xl px-4 py-3">
+                                <div class="w-9 h-9 rounded-lg bg-white border border-brand-sandDark/25 flex items-center justify-center text-brand-dark shrink-0 shadow-sm">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <div class="min-w-0">
+                                    <p class="text-[11px] font-bold uppercase tracking-wider text-brand-muted">Ventures</p>
+                                    <p class="text-sm font-bold text-brand-dark truncate">Founder, <a href="https://skillifly.cloud" target="_blank" rel="noopener noreferrer" class="text-brand-dark hover:text-brand-sandDark transition-colors underline underline-offset-2 decoration-brand-sandDark/40 hover:decoration-brand-sandDark">SKILLIFLY</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto">
+                            <div class="w-12 h-[3px] rounded-full bg-brand-sandDark/60 mb-5"></div>
+                            <p class="text-brand-muted text-sm leading-relaxed">
+                                Driving the vision of merging AI and cultural tourism. Ahmed leverages his extensive experience to build revolutionary technology that redefines storytelling.
+                            </p>
                         </div>
                     </div>
-                    
-                    <!-- mt-auto pushes this to the bottom so both cards are equal height -->
-                    <p class="text-brand-muted text-sm leading-relaxed border-t border-brand-sandDark/20 pt-5 mt-auto">
-                        Driving the vision of merging AI and cultural tourism. Ahmed leverages his extensive experience to build revolutionary technology that redefines storytelling.
-                    </p>
                 </div>
 
                 <!-- Omar Mahmoud -->
-                <div class="bg-white border border-brand-sandDark/30 shadow-soft p-8 rounded-2xl card-hover flex flex-col text-left">
-                    <h3 class="text-2xl font-bold text-brand-dark mb-1">Omar Mahmoud</h3>
-                    <p class="text-brand-dark/60 font-bold text-xs mb-6 uppercase tracking-wider">Growth & Co-founder</p>
-                    
-                    <div class="flex flex-col gap-3 mb-6">
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-sand border border-brand-sandDark/30 flex items-center justify-center shrink-0">
-                                <svg class="w-4 h-4 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                <div class="bg-white border border-brand-sandDark/25 rounded-3xl shadow-soft group hover:shadow-floating hover:-translate-y-1.5 hover:border-brand-sandDark/60 transition-all duration-300 flex flex-col overflow-hidden text-left">
+                    <div class="h-1.5 bg-gradient-to-r from-brand-sandDark/80 via-brand-sandDark to-brand-sandDark/20"></div>
+                    <div class="p-8 md:p-9 flex flex-col flex-1">
+                        <div class="flex items-center gap-4 mb-7">
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-dark to-[#081a30] ring-2 ring-brand-sandDark/30 flex items-center justify-center shrink-0 shadow-md">
+                                <span class="text-brand-sandDark font-extrabold text-xl tracking-wide">OM</span>
                             </div>
-                            <span class="text-sm font-semibold text-brand-dark">Founder, explore-misr.ai</span>
+                            <div class="min-w-0">
+                                <h3 class="text-2xl font-bold text-brand-dark tracking-tight leading-tight">Omar Mahmoud</h3>
+                                <p class="text-brand-muted font-bold text-xs mt-1.5 uppercase tracking-widest">Growth &amp; Co-founder</p>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-8 h-8 rounded-full bg-brand-sand border border-brand-sandDark/30 flex items-center justify-center shrink-0">
-                                <svg class="w-4 h-4 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+
+                        <div class="flex flex-col gap-3 mb-8">
+                            <div class="flex items-center gap-3 bg-brand-sandLight border border-brand-sandDark/20 rounded-xl px-4 py-3">
+                                <div class="w-9 h-9 rounded-lg bg-white border border-brand-sandDark/25 flex items-center justify-center text-brand-dark shrink-0 shadow-sm">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </div>
+                                <div class="min-w-0">
+                                    <p class="text-[11px] font-bold uppercase tracking-wider text-brand-muted">Explore Misr</p>
+                                    <p class="text-sm font-bold text-brand-dark truncate">Founder, Explore Misr AI</p>
+                                </div>
                             </div>
-                            <span class="text-sm font-semibold text-brand-dark">CMO, <a href="https://skillifly.cloud" target="_blank" rel="noopener noreferrer" class="hover:underline text-brand-dark font-bold underline-offset-2">SKILLIFLY</a></span>
+                            <div class="flex items-center gap-3 bg-brand-sandLight border border-brand-sandDark/20 rounded-xl px-4 py-3">
+                                <div class="w-9 h-9 rounded-lg bg-white border border-brand-sandDark/25 flex items-center justify-center text-brand-dark shrink-0 shadow-sm">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                                </div>
+                                <div class="min-w-0">
+                                    <p class="text-[11px] font-bold uppercase tracking-wider text-brand-muted">Ventures</p>
+                                    <p class="text-sm font-bold text-brand-dark truncate">Data-Marketing, <a href="https://skillifly.cloud" target="_blank" rel="noopener noreferrer" class="text-brand-dark hover:text-brand-sandDark transition-colors underline underline-offset-2 decoration-brand-sandDark/40 hover:decoration-brand-sandDark">SKILLIFLY</a></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto">
+                            <div class="w-12 h-[3px] rounded-full bg-brand-sandDark/60 mb-5"></div>
+                            <p class="text-brand-muted text-sm leading-relaxed">
+                                Spearheading marketing and growth. Omar combines his deep expertise to position explore-misr.ai at the forefront of the global tourism and AI hardware market.
+                            </p>
                         </div>
                     </div>
-                    
-                    <!-- mt-auto pushes this to the bottom so both cards are equal height -->
-                    <p class="text-brand-muted text-sm leading-relaxed border-t border-brand-sandDark/20 pt-5 mt-auto">
-                        Spearheading marketing and growth. Omar combines his deep expertise to position explore-misr.ai at the forefront of the global tourism and AI hardware market.
-                    </p>
                 </div>
             </div>
         </div>
@@ -277,7 +312,7 @@
     <footer class="border-t border-brand-sandDark/20 py-10 text-center bg-brand-sandLight relative z-10">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex items-center justify-center gap-3 mb-6">
-                <img src="{% static 'img/explore-misr-logo.png' %}" alt="Explore Misr Logo" class="max-h-8 w-auto object-contain">
+                <img src="{% static 'img/explore-misr-ai-icon.png' %}" alt="Explore Misr Logo" class="max-h-8 w-auto object-contain">
                 <span class="font-bold text-xl tracking-tight text-brand-dark">explore-misr.ai</span>
             </div>
             <p class="text-brand-muted text-sm font-medium">© 2026 explore-misr.ai. All rights reserved. Revolutionizing Tourism.</p>
