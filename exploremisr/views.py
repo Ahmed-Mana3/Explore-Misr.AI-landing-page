@@ -3,7 +3,8 @@ import re
 from django.contrib import messages
 from django.shortcuts import redirect, render
 
-from waitlist.models import WaitlistEntry
+# In-memory waitlist (Vercel serverless has a read-only filesystem, so no DB)
+WAITLIST_NUMBERS = []
 
 
 def normalize_mobile_number(value):
@@ -18,15 +19,14 @@ def index(request):
         mobile_number = normalize_mobile_number(request.POST.get('mobile_number'))
         if not mobile_number:
             messages.error(request, 'Please enter a valid mobile number.')
-        elif WaitlistEntry.objects.filter(mobile_number=mobile_number).exists():
+        elif mobile_number in WAITLIST_NUMBERS:
             messages.info(request, 'This number is already on the waitlist.')
         else:
-            WaitlistEntry.objects.create(mobile_number=mobile_number)
+            WAITLIST_NUMBERS.append(mobile_number)
             messages.success(request, 'Thank you! You have been added to the waitlist.')
         return redirect('/#waitlist')
     return render(request, 'index.html')
 
 
 def manage_waitlist(request):
-    numbers = WaitlistEntry.objects.order_by('created_at')
-    return render(request, 'manage.html', {'numbers': numbers})
+    return render(request, 'manage.html', {'numbers': WAITLIST_NUMBERS})

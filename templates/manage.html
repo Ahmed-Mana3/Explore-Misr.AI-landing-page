@@ -42,15 +42,13 @@
                         <tr class="border-b border-brand-sandDark/30">
                             <th class="py-3 px-4 font-semibold text-brand-muted">#</th>
                             <th class="py-3 px-4 font-semibold text-brand-muted">Mobile Number</th>
-                            <th class="py-3 px-4 font-semibold text-brand-muted">Date Added</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for number in numbers %}
                         <tr class="border-b border-brand-sandDark/10 hover:bg-brand-sandLight/50 transition-colors">
                             <td class="py-3 px-4">{{ forloop.counter }}</td>
-                            <td class="py-3 px-4 font-medium">{{ number.mobile_number }}</td>
-                            <td class="py-3 px-4 text-brand-muted">{{ number.created_at|date:"M d, Y H:i" }}</td>
+                            <td class="py-3 px-4 font-medium">{{ number }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>

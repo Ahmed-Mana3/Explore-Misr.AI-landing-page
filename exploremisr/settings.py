@@ -24,7 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-r4i^dyo205#xj4t7&)s+b3r5!!%am0o#t6l#c^wkh*bdx=#-@5')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+IS_SERVERLESS = bool(os.environ.get('VERCEL') or os.environ.get('AWS_LAMBDA_FUNCTION_NAME'))
+DEBUG = os.environ.get('DJANGO_DEBUG', '').lower() in ('true', '1') or not IS_SERVERLESS
 
 # Security settings for production
 if not DEBUG:
@@ -37,12 +38,19 @@ if not DEBUG:
 
 ALLOWED_HOSTS = (
     ['*']
-    if DEBUG
-    else ['explore-misr.online', 'www.explore-misr.online', 'localhost', '127.0.0.1']
+    if DEBUG and not IS_SERVERLESS
+    else [
+        'explore-misr.online',
+        'www.explore-misr.online',
+        'localhost',
+        '127.0.0.1',
+        '.vercel.app',
+    ]
 )
 CSRF_TRUSTED_ORIGINS = [
     'https://explore-misr.online',
     'https://www.explore-misr.online',
+    'https://*.vercel.app',
     'http://localhost',
     'http://127.0.0.1',
 ]
@@ -131,6 +139,9 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+# Messages are stored in a signed cookie so no database is needed on serverless
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
 
 # Static files (CSS, JavaScript, Images)
