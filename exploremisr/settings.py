@@ -35,8 +35,17 @@ if not DEBUG:
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
     SECURE_HSTS_PRELOAD = True
 
-ALLOWED_HOSTS = ['explore-misr.online', 'www.explore-misr.online', 'localhost', '127.0.0.1']
-CSRF_TRUSTED_ORIGINS = ['https://explore-misr.online', 'https://www.explore-misr.online']
+ALLOWED_HOSTS = (
+    ['*']
+    if DEBUG
+    else ['explore-misr.online', 'www.explore-misr.online', 'localhost', '127.0.0.1']
+)
+CSRF_TRUSTED_ORIGINS = [
+    'https://explore-misr.online',
+    'https://www.explore-misr.online',
+    'http://localhost',
+    'http://127.0.0.1',
+]
 
 
 # Application definition
