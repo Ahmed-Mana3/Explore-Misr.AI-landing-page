@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
 
 # Global list to store waitlist entries in memory
 WAITLIST_NUMBERS = []
