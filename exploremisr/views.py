@@ -13,6 +13,5 @@ def index(request):
             return redirect('/#waitlist')
     return render(request, 'index.html')
 
-@login_required
 def manage_waitlist(request):
     return render(request, 'manage.html', {'numbers': WAITLIST_NUMBERS})
